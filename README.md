@@ -13,6 +13,6 @@ pdo_sqlite: 937
 8. create .env file from .env.example
 9. `php artisan key:generate`
 10. `php artisan migrate` (yes)
-11. run laravel `composer run dev`
+11. run laravel `composer run dev` = serveri avamiseks
  
 sisse logimine: git config --global user.name/email
