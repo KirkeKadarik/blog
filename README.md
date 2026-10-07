@@ -16,3 +16,11 @@ pdo_sqlite: 937
 11. run laravel `composer run dev` = serveri avamiseks
  
 sisse logimine: git config --global user.name/email
+
+
+database käsklused:
+
+php artisan migrate - updateb lisatud andmeid
+php artisan migrate:refresh - võtab ära ja võtab tagasi
+php artisan migrate:fresh - 
+php artisan make:model Post - uus table "Post"
