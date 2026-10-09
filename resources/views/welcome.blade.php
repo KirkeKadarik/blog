@@ -1,6 +1,6 @@
 @extends('partials.layout')
 @section('content')
-<div class ="container mx-auto flex gap-2">
+<div class ="container mx-auto flex flex-col gap-2">
     <h1></h1>
     @foreach ($posts as $post)
         <div class="card bg-base-100 shadow-sm my-2">
