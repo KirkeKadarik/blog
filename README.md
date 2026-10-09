@@ -10,7 +10,7 @@ openssl: 932
 pdo_sqlite: 937
 6. composer install
 7.1) bun install,2) bun run build,3) bun run dev
-8. create .env file from .env.example
+8. create .env file from .env.example - " cp .env.example .env "
 9. `php artisan key:generate`
 10. `php artisan migrate` (yes)
 11. run laravel `composer run dev` = serveri avamiseks
