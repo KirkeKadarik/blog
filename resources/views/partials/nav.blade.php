@@ -10,7 +10,7 @@
             <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                 <li><a href="{{ route('buttons') }}">Buttons</a></li>
                 <li>
-                    <a>Parent</a>
+                    <a>Admin</a>
                     <ul class="p-2">
                         <li><a href="{{ route('posts.index') }}">Posts</a></li>
                         <li><a>Submenu 2</a></li>
@@ -23,10 +23,10 @@
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
+            <li><a href="{{ route('buttons') }}">Buttons</a></li>
             <li>
                 <details>
-                    <summary>Parent</summary>
+                    <summary>Admin</summary>
                     <ul class="p-2 bg-base-100 w-40 z-1">
                         <li><a href="{{ route('posts.index') }}">Posts</a></li>
                         <li><a>Submenu 2</a></li>
@@ -36,7 +36,8 @@
             <li><a>Item 3</a></li>
         </ul>
     </div>
-    <div class="navbar-end">
-        <a class="btn">Button</a>
+    <div class="navbar-end gap-2">
+        <a href="{{ route('register') }}" class="btn btn-primary">Register</a>
+        <a href="{{ route('login') }}" class="btn btn-secondary">Login</a>
     </div>
 </div>
