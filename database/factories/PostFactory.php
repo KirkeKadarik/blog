@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Carbon;
 use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -17,9 +18,18 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+        
+        $created = Carbon::create(fake()->dateTimeBetween());
+        $updated = fake()->dateTimeBetween($created, Carbon::create($created)->addDays(3));
+        if (rand(0, 10)) {
+            $update = $created;
+        }
+
         return [
             'title' => fake()->sentence(),
             'body' => fake()->paragraphs(6, true),
+            'created_at' => $created,
+            'updated_at' => $updated,
         ];
     }
 }
