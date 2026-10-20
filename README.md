@@ -21,6 +21,7 @@ sisse logimine: git config --global user.name/email
 
 database käsklused:
 
+php artisan key:generate - kui esimest korda + driver files
 php artisan migrate - updateb lisatud andmeid
 php artisan migrate:refresh - võtab ära ja võtab tagasi
 php artisan migrate:fresh - 
