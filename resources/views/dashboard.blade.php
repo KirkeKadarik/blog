@@ -1,17 +1,21 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('partials.layout')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
+@section('content')
+    <div class="container mx-auto p-4">
+        <div class="max-w-2xl mx-auto space-y-6">
+            <h1 class="text-2xl font-bold">
+                @lang('Dashboard')
+            </h1>
+
+            <div class="card bg-base-300 shadow-sm p-6">
+                <p>{{ __("You're logged in!") }}</p>
+
+                <div class="card-actions justify-end mt-4">
+                    <a href="{{ route('profile.edit') }}" class="btn btn-link">
+                        @lang('Profile')
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection
