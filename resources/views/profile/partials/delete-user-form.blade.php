@@ -10,7 +10,7 @@
 
         <button
             type="button"
-            class="btn btn-error mt-4"
+            class="btn btn-neutral mt-4"
             onclick="delete_account_modal.showModal()"
         >
             {{ __('Delete Account') }}
