@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,5 +19,6 @@ class DatabaseSeeder extends Seeder
       $this->call(UserSeeder::class);
         $this->call(PostSeeder::class);
         $this->call(ImageSeeder::class);
+         $this->call(CommentSeeder::class);
     }
 }
