@@ -6,13 +6,13 @@
                 {!! __('pagination.previous') !!}
             </span>
         @else
-            <a href="{{ $paginator->previousPageUrl() }}" rel="prev" class="btn btn-outline btn-accent">
+            <a href="{{ $paginator->previousPageUrl() }}" rel="prev" class="btn btn-soft btn-primary">
                 {!! __('pagination.previous') !!}
             </a>
         @endif
 
         @if ($paginator->hasMorePages())
-           <a href="{{ $paginator->nextPageUrl() }}" rel="next" class="btn btn-outline btn-accent">
+           <a href="{{ $paginator->nextPageUrl() }}" rel="next" class="btn btn-soft btn-secondary">
                 {!! __('pagination.next') !!}
             </a>
         @else
