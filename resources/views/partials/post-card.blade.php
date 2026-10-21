@@ -5,11 +5,11 @@
           </figure>
       @elseif($post->images->count() > 1)
           <div class="carousel rounded-box ">
-            @foreach($post->images as $image)
-              <div class="carousel-item w-full">
-                  <img src="{{ $image->path}}" class="w-full"/>
+              @foreach ($post->images as $image)
+                  <div class="carousel-item w-full">
+                      <img src="{{ $image->path }}" class="w-full" />
 
-              </div>
+                  </div>
               @endforeach
           </div>
       @endif
@@ -22,6 +22,11 @@
           @endisset
           <span class="text-base-content/70">{{ $post->user->name }}</span>
           <span class="text-base-content/70">{{ $post->created_at->diffForHumans() }}</span>
+          <div>
+              @foreach ($post->tags as $tag)
+                  <div class = "badge badge-outline badge-primary">{{ $tag->name }}</div>
+              @endforeach
+          </div>
           <div class="card-actions justify-end">
               @isset($posts)
                   <a href="{{ route('post', $post) }}" class="btn btn-primary">@lang('Read more')</a>
