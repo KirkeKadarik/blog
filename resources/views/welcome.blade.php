@@ -9,4 +9,7 @@
     @endforeach
 </div>
 </div>
+{{-- @php
+  throw new \Exeption();
+@endphp --}}
 @endsection
