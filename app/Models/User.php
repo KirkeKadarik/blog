@@ -9,7 +9,9 @@ use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Override;
 use Spatie\Sluggable\Attributes\Sluggable;
+use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
 #[Fillable(['name', 'email', 'password'])]
@@ -18,14 +20,13 @@ use Spatie\Sluggable\SlugOptions;
 class User extends Authenticatable implements MustVerifyEmail
 {
     /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable, HasSlug;
+    use HasFactory, Notifiable;
 
-    public function getSlugOptions(): SlugOptions {
-return SlugOptions::create()
-    ->generateSlugsFrom('name')
-    ->saveSlugsTo('slug');
-
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
     }
+
     /**
      * Get the attributes that should be cast.
      *
@@ -39,11 +40,13 @@ return SlugOptions::create()
         ];
     }
 
-    public function posts() {
+    public function posts()
+    {
         return $this->hasMany(Post::class);
     }
 
-     public function comments() {
+    public function comments()
+    {
         return $this->hasMany(Comment::class);
     }
 }
