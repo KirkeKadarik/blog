@@ -31,7 +31,7 @@
               @foreach ($post->tags as $tag)
                   <div class = "badge badge-outline badge-primary">{{ $tag->name }}</div>
               @endforeach
-          </div>
+         
           <div class="card-actions justify-end">
               @isset($posts)
                   <a href="{{ route('post', $post) }}" class="btn btn-primary">@lang('Read more')</a>
